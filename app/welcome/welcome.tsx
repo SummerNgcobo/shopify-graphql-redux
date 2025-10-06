@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import type { FC } from 'react';
 import { shopifyFetch } from '../../src/lib/shopifyClient.js';
+import '../styles/welcome.css';
 
 interface Product {
   id: string;
@@ -28,7 +29,7 @@ export const Welcome: FC = () => {
     async function fetchProducts() {
       try {
         const query = `{
-          products(first: 8) {
+          products(first: 12) {
             edges {
               node {
                 id
